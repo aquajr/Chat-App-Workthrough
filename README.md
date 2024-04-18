@@ -3,4 +3,4 @@
 - You need to install a few things before starting
 - Added forms
 - Included with a database
- 
+- Has error handling
