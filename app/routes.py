@@ -2,8 +2,9 @@ from app import app, db
 from app.models import User, Post
 from flask_login import login_user, logout_user, login_required, current_user
 from flask import render_template, flash, redirect, url_for, request
-from app.forms import LoginForm, RegisterForm, EditProfileForm, PostForm
+from app.forms import LoginForm, RegisterForm, EditProfileForm, PostForm, ResetPasswordRequestForm, ResetPasswordForm
 from datetime import datetime
+from app.email import send_password_reset_email
 
 
 @app.route('/edit_profile', methods=['GET', 'POST'])
@@ -25,7 +26,23 @@ def edit_profile():
         form=form
     )
 
-
+@app.route('/request-password-reset', methods=['GET', 'POST'])
+def request_password_reset():
+    """Reset passwprd reset URL"""
+    if current_user.is_authenticated:
+        return redirect(url_for('index'))
+    form = ResetPasswordRequestForm()
+    if form.validate_on_submit():
+        user = User.query.filter_by(email=form.email.data).first()
+        if user:
+            send_password_reset_email(user)
+        flash('Check your email for the instructions to reset your password')
+        return redirect(url_for('login'))
+    return render_template(
+        'request_password_reset.html',
+        title='Request Password Reset',
+        form=form
+    )
 
 
 @app.before_request
@@ -33,6 +50,27 @@ def before_request():
     if current_user.is_authenticated:
         current_user.last_seen = datetime.utcnow()
         db.session.commit()
+
+
+@app.route('/reset-password/<token>', methods=['GET', 'POST'])
+def reset_password(token):
+    """Reset password URL"""
+    if current_user.is_authenticated:
+        return redirect(url_for('index'))
+    user = User.verify_reset_password_token(token)
+    if not user:
+        return redirect(url_for('index'))
+    form = ResetPasswordForm()
+    if form.validate_on_submit():
+        user.set_passord(form.password.data)
+        db.session.commit()
+        flash('Yoor password has been reset.')
+        return redirect(url_for('login'))
+    return render_template(
+        'reset_password.html',
+        title='Reset Password',
+        form=form
+        )    
 
 
 @app.route('/logout')

@@ -6,6 +6,7 @@ from flask_login import LoginManager
 import logging
 from logging.handlers import SMTPHandler, RotatingFileHandler
 import os
+from flask_mail import Mail
 
 
 app = Flask(__name__)
@@ -16,6 +17,7 @@ db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 login = LoginManager(app)
 login.login_view = 'login'
+mail = Mail(app)
 
 
 #Email logs
@@ -62,3 +64,10 @@ if not app.debug:
 
 
 from app import routes, models, errors
+
+#from flask_mail import Message
+#from app import mail
+#msg = Message('Hello', sender=app.config['ADMINS'][0], recipients=['capneutral6@gmail.com'])
+#msg.body = 'Hello World'
+#msg.html = '<p>Hello World</p>'
+#mail.send(msg)
