@@ -16,7 +16,7 @@
             </p>
             {% if user.last_seen %}
                 <p>
-                    <strong>👀Last Seen: </strong> {{ user.last_seen }}
+                    <strong>👀Last Seen: </strong> {{ moment(user.last_seen).format('lll') }}
                 </p>
             {% endif %}
             {% if user.about_me %}
