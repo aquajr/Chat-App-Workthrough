@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
-{% block content %}
-     <div class="row">
+{% block app_content %}
+    <div class="row mt-4">
         <div class="col-md-5 text-center">
             <p>
                 <img src="{{ user.avatar(120) }}" alt="User avatar">
@@ -9,7 +9,7 @@
         </div>
         <div class="col-md-7">
             <p>
-                <strong>👤Username: </strong> {{ user.username }}
+                <strong>👤Username: </strong>  {{ user.username }}
             </p>
             <p>
                 <strong>📧Email: </strong> {{ user.email }}
@@ -20,30 +20,31 @@
                 </p>
             {% endif %}
             {% if user.about_me %}
-            <p>
-                <strong>🤘About me: </strong> {{ user.about_me }}
-            </p>
+                <p>
+                    <strong>🤘About me: </strong> {{ user.about_me }}
+                </p>
             {% endif %}
-            <p>
-                <a href="{{ url_for('edit_profile') }}">✂️Edit Profile</a>
-            </p>
-        </div>       
-     </div>
-     <hr>
-     <div class="row">
-        <div class="col-md-12">
-            {% for post in posts %}
-                {% if post %}
-                        {% include '_post.html' %}
-                {% endif %}
-            {% endfor %}
+            {% if user == current_user %}
+                <p>
+                    <a href="{{ url_for('edit_profile') }}">✂Edit profile</a>
+                </p>
+            {% endif %}
         </div>
-     </div>
-     <!--Pagination-->
-        {% if prev_url %}
-            <a href=" {{ prev_url }} ">Newer Posts</a>
-        {% endif %}
-        {% if next_url %}
-            <a href=" {{ next_url }} ">Older Posts</a>
-        {% endif %}
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <!-- Start: posts -->
+            {% for post in posts %}
+                {% include '_post.html' %}
+            {% endfor %}
+            <!-- End: posts -->
+
+            <!-- Start: pagination -->
+            {% include '_pagination.html' %}
+            <!-- End: pagination -->
+        </div>
+        <div class="col-md-2"></div>
+    </div>
 {% endblock %}

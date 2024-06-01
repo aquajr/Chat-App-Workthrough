@@ -62,9 +62,9 @@ def reset_password(token):
         return redirect(url_for('index'))
     form = ResetPasswordForm()
     if form.validate_on_submit():
-        user.set_passord(form.password.data)
+        user.set_passWord(form.password.data)
         db.session.commit()
-        flash('Yoor password has been reset.')
+        flash('YoUr password has been reset.')
         return redirect(url_for('login'))
     return render_template(
         'reset_password.html',
@@ -78,9 +78,13 @@ def logout():
     logout_user()
     return redirect(url_for('login'))
 
+@app.route('/',  methods=['GET', 'POST'])
+def landing_page():
+    """Landing page URL"""
+    return render_template('landing_page.html', title='Welcome')
 
 @app.route('/', methods=['GET', 'POST'])
-@app.route('/index', methods=['GET', 'POST'] )
+@app.route('/home', methods=['GET', 'POST'] )
 @login_required
 def index():
     """Index url"""
