@@ -1,15 +1,18 @@
 <table class="table table-hover">
-    <tr>
+    <tr style="border: 5px solid rgb(13, 78, 29);">
         <td width="70px">
             <a href="{{ url_for('profile', username=post.author.username) }}">
-                <img src="{{ post.author.avatar(70) }}" />
+                <img src="{{ post.author.avatar(70) }}" style="border: 5px solid rgb(0, 0, 0);">
             </a>
         </td>
         <td>
-            <a href="{{ url_for('profile', username=post.author.username) }}">
+            <h7 style="border: 3px solid rgb(0, 0, 0); border-radius: 10%; background-color: rgb(23, 147, 25);">
+            <a href="{{ url_for('profile', username=post.author.username) }}" style="color: aliceblue; text-decoration:none;">
                 {{ post.author.username }}
             </a>
-            said {{ moment(post.timestamp).fromNow() }} :
+            </h7>
+           <h7 style="font-family: cursive;"> said {{ moment(post.timestamp).fromNow() }} : </h7>
+            
             <br>
             {{ post.body }}
         </td>

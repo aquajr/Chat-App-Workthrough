@@ -1,22 +1,22 @@
 <div class="row text-center">
     <div class="col-md-6">
         {% if prev_url %}
-            <a class="text-primary" href="{{ prev_url or '#' }}">
+            <a class="text-dark" href="{{ prev_url or '#' }}" style="border: 3px solid rgb(51, 221, 21); border-radius: 10%; background-color: rgb(51, 221, 21); text-decoration:none; color:black; font-family: cursive;">
                 <span aria-hidden="true">&#60;</span> Newer Posts
             </a>
         {% else %}
-            <a class="link_disabled" href="{{ prev_url or '#' }}">
+            <a class="link_disabled" href="{{ prev_url or '#' }}" style="border: 3px solid rgb(51, 221, 21); border-radius: 10%; background-color: rgb(51, 221, 21); text-decoration:none; color: rgb(0, 0, 0); font-family: cursive;">
                 <span aria-hidden="true">&#60;</span> Newer Posts
             </a>
         {% endif %}
     </div>
     <div class="col-md-6">
         {% if next_url %}
-            <a class="text-primary" href="{{ next_url or '#' }}">
+            <a class="text-dark" href="{{ next_url or '#' }}" style="color:black; border: 3px solid rgb(51, 221, 21); border-radius: 10%; background-color: rgb(51, 221, 21); text-decoration:none; font-family: cursive;">
                 Older Posts <span aria-hidden="true">&#62;</span>
             </a>
         {% else %}
-            <a class="link_disabled" href="{{ next_url or '#' }}">
+            <a class="link_disabled" href="{{ next_url or '#' }}" style="color:black; border: 3px solid rgb(51, 221, 21); border-radius: 10%; background-color: rgb(51, 221, 21); text-decoration:none; font-family: cursive;">
                 Older Posts <span aria-hidden="true">&#62;</span>
             </a>
         {% endif %}
