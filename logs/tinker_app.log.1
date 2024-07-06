@@ -1,95 +1,55 @@
-2024-06-01 10:13:30,587 ERROR: Exception on /home [GET] [in /home/missmandazi/.local/lib/python3.8/site-packages/flask/app.py:825]
-Traceback (most recent call last):
-  File "/home/missmandazi/.local/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/missmandazi/.local/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/home/missmandazi/.local/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/missmandazi/.local/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-  File "/home/missmandazi/.local/lib/python3.8/site-packages/flask_login/utils.py", line 290, in decorated_view
-    return current_app.ensure_sync(func)(*args, **kwargs)
-  File "/mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/routes.py", line 108, in index
-    return render_template(
-  File "/home/missmandazi/.local/lib/python3.8/site-packages/flask/templating.py", line 152, in render_template
-    return _render(app, template, context)
-  File "/home/missmandazi/.local/lib/python3.8/site-packages/flask/templating.py", line 133, in _render
-    rv = template.render(context)
-  File "/home/missmandazi/.local/lib/python3.8/site-packages/jinja2/environment.py", line 1301, in render
-    self.environment.handle_exception()
-  File "/home/missmandazi/.local/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "/mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/templates/index.html", line 1, in top-level template code
-    {% extends 'base.html' %}
-  File "/mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/templates/base.html", line 74, in top-level template code
-    {% block content %}
-  File "/mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/templates/index.html", line 47, in block 'content'
-    {% include '_post.html' %}
-  File "/mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/templates/_post.html", line 12, in top-level template code
-    said: {{ moment().startOf('hour').fromNow() }}
-  File "/home/missmandazi/.local/lib/python3.8/site-packages/jinja2/utils.py", line 83, in from_obj
-    if hasattr(obj, "jinja_pass_arg"):
-jinja2.exceptions.UndefinedError: 'flask_moment.moment object' has no attribute 'startOf'
-2024-06-01 10:17:26,585 INFO: Tinker Full-stack App [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/__init__.py:63]
-2024-06-01 10:17:32,038 ERROR: Exception on /home [GET] [in /home/missmandazi/.local/lib/python3.8/site-packages/flask/app.py:825]
-Traceback (most recent call last):
-  File "/home/missmandazi/.local/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/missmandazi/.local/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/home/missmandazi/.local/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/missmandazi/.local/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-  File "/home/missmandazi/.local/lib/python3.8/site-packages/flask_login/utils.py", line 290, in decorated_view
-    return current_app.ensure_sync(func)(*args, **kwargs)
-  File "/mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/routes.py", line 108, in index
-    return render_template(
-  File "/home/missmandazi/.local/lib/python3.8/site-packages/flask/templating.py", line 152, in render_template
-    return _render(app, template, context)
-  File "/home/missmandazi/.local/lib/python3.8/site-packages/flask/templating.py", line 133, in _render
-    rv = template.render(context)
-  File "/home/missmandazi/.local/lib/python3.8/site-packages/jinja2/environment.py", line 1301, in render
-    self.environment.handle_exception()
-  File "/home/missmandazi/.local/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "/mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/templates/index.html", line 1, in top-level template code
-    {% extends 'base.html' %}
-  File "/mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/templates/base.html", line 74, in top-level template code
-    {% block content %}
-  File "/mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/templates/index.html", line 47, in block 'content'
-    {% include '_post.html' %}
-  File "/mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/templates/_post.html", line 12, in top-level template code
-    said {{ moment().startOf('hour').fromNow() }} :
-  File "/home/missmandazi/.local/lib/python3.8/site-packages/jinja2/utils.py", line 83, in from_obj
-    if hasattr(obj, "jinja_pass_arg"):
-jinja2.exceptions.UndefinedError: 'flask_moment.moment object' has no attribute 'startOf'
-2024-06-01 10:20:30,218 INFO: Tinker Full-stack App [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/__init__.py:63]
-2024-06-01 10:55:14,335 INFO: Tinker Full-stack App [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/__init__.py:63]
-2024-06-15 09:16:00,266 INFO: Tinker Full-stack App [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/__init__.py:63]
-2024-06-15 09:19:12,167 ERROR: Exception on /reset-password/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXNldF9wYXNzd29yZCI6NiwiZXhwIjoxNzE4NDMyODMzLjg3NzEyM30.uX2NqjGhYsA4rOuPhBxResnwYENerx7eYuK4wpJN1hc [POST] [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/ball/lib/python3.8/site-packages/flask/app.py:838]
-Traceback (most recent call last):
-  File "/mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/ball/lib/python3.8/site-packages/flask/app.py", line 1473, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/ball/lib/python3.8/site-packages/flask/app.py", line 882, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/ball/lib/python3.8/site-packages/flask/app.py", line 880, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/ball/lib/python3.8/site-packages/flask/app.py", line 865, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
-  File "/mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/routes.py", line 65, in reset_password
-    user.set_passWord(form.password.data)
-AttributeError: 'User' object has no attribute 'set_passWord'
-2024-06-15 09:20:08,319 INFO: Tinker Full-stack App [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/__init__.py:63]
-2024-06-15 09:45:33,756 INFO: Tinker Full-stack App [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/__init__.py:63]
-2024-06-15 09:54:18,314 INFO: Tinker Full-stack App [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/__init__.py:63]
-2024-06-22 10:22:41,895 INFO: Tinker Full-stack App [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/__init__.py:63]
-2024-06-22 10:25:29,497 INFO: Tinker Full-stack App [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/__init__.py:63]
-2024-06-22 10:27:52,244 INFO: Tinker Full-stack App [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/__init__.py:63]
-2024-06-22 10:31:17,691 INFO: Tinker Full-stack App [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/__init__.py:63]
-2024-06-22 10:46:16,422 INFO: Tinker Full-stack App [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/__init__.py:63]
-2024-06-29 09:25:13,832 INFO: Tinker Full-stack App [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/__init__.py:63]
-2024-06-29 09:27:56,141 INFO: Tinker Full-stack App [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/__init__.py:63]
-2024-06-29 09:29:45,044 INFO: Tinker Full-stack App [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/__init__.py:63]
-2024-06-29 09:30:32,116 INFO: Tinker Full-stack App [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/__init__.py:63]
+2024-06-29 09:32:07,857 INFO: Tinker Full-stack App [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/__init__.py:63]
+2024-06-29 09:45:49,128 INFO: Tinker Full-stack App [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/__init__.py:63]
+2024-06-29 09:48:58,381 INFO: Tinker Full-stack App [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/__init__.py:63]
+2024-06-29 10:10:21,565 INFO: Tinker Full-stack App [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/__init__.py:63]
+2024-06-29 10:12:04,921 INFO: Tinker Full-stack App [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/__init__.py:63]
+2024-06-29 10:13:30,891 INFO: Tinker Full-stack App [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/__init__.py:63]
+2024-06-29 10:20:34,886 INFO: Tinker Full-stack App [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/__init__.py:63]
+2024-06-29 10:40:13,516 INFO: Tinker Full-stack App [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/__init__.py:63]
+2024-06-29 10:43:15,396 INFO: Tinker Full-stack App [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/__init__.py:63]
+2024-06-29 10:43:54,482 INFO: Tinker Full-stack App [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/__init__.py:63]
+2024-06-29 10:45:14,647 INFO: Tinker Full-stack App [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/__init__.py:63]
+2024-06-29 10:46:09,623 INFO: Tinker Full-stack App [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/__init__.py:63]
+2024-06-29 10:46:46,136 INFO: Tinker Full-stack App [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/__init__.py:63]
+2024-06-29 10:48:23,971 INFO: Tinker Full-stack App [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/__init__.py:63]
+2024-06-29 10:49:45,681 INFO: Tinker Full-stack App [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/__init__.py:63]
+2024-06-29 10:52:59,953 INFO: Tinker Full-stack App [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/__init__.py:63]
+2024-06-29 10:54:30,641 INFO: Tinker Full-stack App [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/__init__.py:63]
+2024-06-29 10:57:35,702 INFO: Tinker Full-stack App [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/__init__.py:63]
+2024-06-29 10:58:57,226 INFO: Tinker Full-stack App [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/__init__.py:63]
+2024-06-29 11:00:54,703 INFO: Tinker Full-stack App [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/__init__.py:63]
+2024-06-29 11:05:54,946 INFO: Tinker Full-stack App [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/__init__.py:63]
+2024-06-29 11:06:48,274 INFO: Tinker Full-stack App [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/__init__.py:63]
+2024-06-29 11:09:09,087 INFO: Tinker Full-stack App [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/__init__.py:63]
+2024-06-29 11:11:41,094 INFO: Tinker Full-stack App [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/__init__.py:63]
+2024-06-29 11:12:30,298 INFO: Tinker Full-stack App [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/__init__.py:63]
+2024-06-29 11:13:26,412 INFO: Tinker Full-stack App [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/__init__.py:63]
+2024-06-29 11:14:44,461 INFO: Tinker Full-stack App [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/__init__.py:63]
+2024-06-29 11:15:45,327 INFO: Tinker Full-stack App [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/__init__.py:63]
+2024-06-29 11:17:22,533 INFO: Tinker Full-stack App [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/__init__.py:63]
+2024-06-29 11:20:46,424 INFO: Tinker Full-stack App [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/__init__.py:63]
+2024-06-29 11:21:42,085 INFO: Tinker Full-stack App [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/__init__.py:63]
+2024-06-29 11:23:56,458 INFO: Tinker Full-stack App [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/__init__.py:63]
+2024-06-29 11:24:22,774 INFO: Tinker Full-stack App [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/__init__.py:63]
+2024-06-29 11:29:01,326 INFO: Tinker Full-stack App [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/__init__.py:63]
+2024-06-29 11:32:38,707 INFO: Tinker Full-stack App [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/__init__.py:63]
+2024-06-29 11:34:18,110 INFO: Tinker Full-stack App [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/__init__.py:63]
+2024-06-29 11:37:08,733 INFO: Tinker Full-stack App [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/__init__.py:63]
+2024-06-29 11:38:44,266 INFO: Tinker Full-stack App [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/__init__.py:63]
+2024-06-29 11:39:27,108 INFO: Tinker Full-stack App [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/__init__.py:63]
+2024-06-29 11:40:28,880 INFO: Tinker Full-stack App [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/__init__.py:63]
+2024-06-29 11:41:12,974 INFO: Tinker Full-stack App [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/__init__.py:63]
+2024-06-29 11:41:56,930 INFO: Tinker Full-stack App [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/__init__.py:63]
+2024-06-29 11:42:46,772 INFO: Tinker Full-stack App [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/__init__.py:63]
+2024-06-29 11:44:20,121 INFO: Tinker Full-stack App [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/__init__.py:63]
+2024-06-29 11:46:15,390 INFO: Tinker Full-stack App [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/__init__.py:63]
+2024-06-29 11:46:41,984 INFO: Tinker Full-stack App [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/__init__.py:63]
+2024-06-29 11:47:18,641 INFO: Tinker Full-stack App [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/__init__.py:63]
+2024-06-29 11:48:03,076 INFO: Tinker Full-stack App [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/__init__.py:63]
+2024-06-29 11:48:26,377 INFO: Tinker Full-stack App [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/__init__.py:63]
+2024-06-29 11:49:23,993 INFO: Tinker Full-stack App [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/__init__.py:63]
+2024-06-29 11:58:29,104 INFO: Tinker Full-stack App [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/__init__.py:63]
+2024-07-06 09:26:44,604 INFO: Tinker Full-stack App [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/__init__.py:63]
+2024-07-06 09:28:15,937 INFO: Tinker Full-stack App [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/__init__.py:63]
+2024-07-06 10:11:18,534 INFO: Tinker Full-stack App [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/__init__.py:63]
+2024-07-06 10:14:19,148 INFO: Tinker Full-stack App [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/__init__.py:63]

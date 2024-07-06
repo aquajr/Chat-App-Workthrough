@@ -1,4 +1,6 @@
-2024-02-24 10:30:22,749 ERROR: Exception on /register [POST] [in /mnt/c/Users/ayand/OneDrive/Documents/software_development/chapter9_assessment_project/ball/lib/python3.8/site-packages/flask/app.py:825]
+2024-02-24 10:24:36,257 INFO: Tinker Full-stack App [in /mnt/c/Users/ayand/OneDrive/Documents/software_development/project-workthrough/app/__init__.py:59]
+2024-02-24 10:25:14,767 INFO: Tinker Full-stack App [in /mnt/c/Users/ayand/OneDrive/Documents/software_development/project-workthrough/app/__init__.py:59]
+2024-02-24 10:28:07,791 ERROR: Exception on /register [POST] [in /mnt/c/Users/ayand/OneDrive/Documents/software_development/chapter9_assessment_project/ball/lib/python3.8/site-packages/flask/app.py:825]
 Traceback (most recent call last):
   File "/mnt/c/Users/ayand/OneDrive/Documents/software_development/chapter9_assessment_project/ball/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1969, in _exec_single_context
     self.dialect.do_execute(
@@ -67,7 +69,5 @@ Traceback (most recent call last):
     cursor.execute(statement, parameters)
 sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: user.username
 [SQL: INSERT INTO user (username, email, password_hash, about_me, last_seen) VALUES (?, ?, ?, ?, ?)]
-[parameters: ('Cacti🌵', 'ayanda@email.com', 'scrypt:32768:8:1$8frE60U0k13NH3ro$eb8b6ec66e94f04896a6407f5e9f03e7b8f750c3c3e926321e0ab4e8e9be3d74409f691e53b8e0ad5aca1e9f8436890d136714c811727e4a5c82c6d8f703aac2', None, '2024-02-24 07:30:22.744359')]
+[parameters: ('Mango🥭', 'cake@email.com', 'scrypt:32768:8:1$KjsyjQ3ioA0aJlwm$a546ce616b8abfc0994fed67ab463e8210fda9c1c4257da1e10e3c89f767cdd2514dd489210c9b9b3c1d5cf1bccdc408ea1c4ddc69afeecce60f17521fa19a2a', None, '2024-02-24 07:28:07.786195')]
 (Background on this error at: https://sqlalche.me/e/20/gkpj)
-2024-02-24 10:33:23,036 INFO: Tinker Full-stack App [in /mnt/c/Users/ayand/OneDrive/Documents/software_development/project-workthrough/app/__init__.py:59]
-2024-02-24 10:36:22,346 INFO: Tinker Full-stack App [in /mnt/c/Users/ayand/OneDrive/Documents/software_development/project-workthrough/app/__init__.py:59]
