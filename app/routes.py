@@ -83,6 +83,11 @@ def landing_page():
     """Landing page URL"""
     return render_template('landing_page.html', title='Welcome')
 
+@app.route('/about_us',  methods=['GET', 'POST'])
+def about_us():
+    """About us URL"""
+    return render_template('about_us.html')
+
 @app.route('/', methods=['GET', 'POST'])
 @app.route('/home', methods=['GET', 'POST'] )
 @login_required

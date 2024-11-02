@@ -50,7 +50,7 @@ class User(UserMixin, db.Model):
 
     def avatar(self, size):
         digest = md5(self.email.lower().encode('utf-8')).hexdigest()
-        return f'https://www.gravatar.com/avatar/{digest}?d=retro&s={size}'
+        return f'https://www.gravatar.com/avatar/{digest}?d=robohash&s={size}'
 
 class Post(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -61,3 +61,12 @@ class Post(db.Model):
 
     def __repr__ (self):
         return f'Post = {self.body}'
+
+class Pins(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(128), index=True)
+    timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+
+    def __repr__ (self):  
+        return f'Pins = {self.name}'

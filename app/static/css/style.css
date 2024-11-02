@@ -1,14 +1,33 @@
-.hero-heading h1 {
-    margin: 60px;
-    font-size: 60px;
-    color: #8b8a8a;
+.custom-orange-button {
+    background-color: #ff9900;
+    border-color: #ff9900;
+    border-radius: 5px;
 }
-.hero-image img {
-    margin: 30px;
-    border-radius: 10px;
+.custom-button {
+    background-color: #ff9900;
+    border-color: #ff9900;
+    border-radius: 5px;
+    font-size: 20px;
+    color: white;
+    font-weight: bolder;
+
 }
-.hero-button button {
-    padding: 30px;
-    font-size: 40px;
-    color: aliceblue;
+.text {
+    color: #ff9900;
+}
+
+.alert {
+    color: #ff9900;
+}
+
+.pic {
+    background-image: url('/static/images/chop.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 5px;
+    margin: 0px auto;
+    height: 700px;
+}
+.my-footer {
+    background-color: #FFB648;
 }

@@ -45,13 +45,13 @@
                     </div>
 
                     <div class="col-lg-12 mb-4">
-                        {{ form.submit(class_='btn bg-success w-100') }}
+                        {{ form.submit(class_='custom-button') }}
                     </div>
                     <p>
                         Forgot password? 
                         <a 
                             href="{{ url_for('request_password_reset') }}" 
-                            class="text-success font-weight-bold">
+                            class="text font-weight-bold">
                             Reset Here
                         </a>
                     </p>
@@ -59,7 +59,7 @@
                         New Here? 
                         <a
                             href="{{ url_for('register') }}" 
-                            class="text-success font-weight-bold">
+                            class="text font-weight-bold" style="color: #ff9900;">
                             Register Now
                         </a>
                     </p>

@@ -1,95 +1,80 @@
-2024-04-19 10:47:29,202 INFO: Tinker Full-stack App [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/__init__.py:61]
-2024-04-19 11:06:17,341 INFO: Tinker Full-stack App [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/__init__.py:61]
-2024-04-19 16:26:44,560 INFO: Tinker Full-stack App [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/__init__.py:61]
-2024-05-11 08:45:54,220 INFO: Tinker Full-stack App [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/__init__.py:61]
-2024-05-11 08:46:32,758 INFO: Tinker Full-stack App [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/__init__.py:61]
-2024-05-11 08:46:49,411 ERROR: Exception on /login [GET] [in /home/missmandazi/.local/lib/python3.8/site-packages/flask/app.py:825]
+2024-09-28 09:55:38,968 ERROR: Exception on /favicon.ico [GET] [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/ball/lib/python3.8/site-packages/flask/app.py:838]
 Traceback (most recent call last):
-  File "/home/missmandazi/.local/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/missmandazi/.local/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/home/missmandazi/.local/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+  File "/mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/ball/lib/python3.8/site-packages/flask/app.py", line 880, in full_dispatch_request
     rv = self.dispatch_request()
-  File "/home/missmandazi/.local/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-  File "/mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/routes.py", line 153, in login
-    return render_template('login.html', title='Login', form=form)
-  File "/home/missmandazi/.local/lib/python3.8/site-packages/flask/templating.py", line 152, in render_template
+  File "/mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/ball/lib/python3.8/site-packages/flask/app.py", line 854, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/ball/lib/python3.8/site-packages/flask/app.py", line 463, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+  File "/mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/ball/lib/python3.8/site-packages/flask/ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "/mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/ball/lib/python3.8/site-packages/werkzeug/routing/map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/ball/lib/python3.8/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/ball/lib/python3.8/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/ball/lib/python3.8/site-packages/flask/app.py", line 765, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/ball/lib/python3.8/site-packages/flask/app.py", line 740, in handle_http_exception
+    return self.ensure_sync(handler)(e)  # type: ignore[no-any-return]
+  File "/mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/CuisineGlobe/app/errors.py", line 7, in not_found_error
+    return render_template('404.html', title='Page Not Found'), 404
+  File "/mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/ball/lib/python3.8/site-packages/flask/templating.py", line 150, in render_template
     return _render(app, template, context)
-  File "/home/missmandazi/.local/lib/python3.8/site-packages/flask/templating.py", line 133, in _render
+  File "/mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/ball/lib/python3.8/site-packages/flask/templating.py", line 131, in _render
     rv = template.render(context)
-  File "/home/missmandazi/.local/lib/python3.8/site-packages/jinja2/environment.py", line 1301, in render
+  File "/mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/ball/lib/python3.8/site-packages/jinja2/environment.py", line 1304, in render
     self.environment.handle_exception()
-  File "/home/missmandazi/.local/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
+  File "/mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/ball/lib/python3.8/site-packages/jinja2/environment.py", line 939, in handle_exception
     raise rewrite_traceback_stack(source=source)
-  File "/mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/templates/login.html", line 1, in top-level template code
-    {% extends 'base.html' %}
-  File "/mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/templates/base.html", line 52, in top-level template code
-    {% block content %}
-  File "/mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/templates/login.html", line 37, in block 'content'
-    <a href="{{ url_for(request_password_reset) }}">Reset Here</a>
-  File "/home/missmandazi/.local/lib/python3.8/site-packages/flask/app.py", line 1018, in url_for
-    if endpoint[:1] == ".":
-jinja2.exceptions.UndefinedError: 'request_password_reset' is undefined
-2024-05-11 08:49:09,493 INFO: Tinker Full-stack App [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/__init__.py:61]
-2024-05-11 08:49:52,525 ERROR: Exception on /login [GET] [in /home/missmandazi/.local/lib/python3.8/site-packages/flask/app.py:825]
+  File "/mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/CuisineGlobe/app/templates/404.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/CuisineGlobe/app/templates/base.html", line 56, in top-level template code
+    <a class="nav-link" href="{{ url_for('home') }}" style="color: #FF9900; font-weight: bolder;">HOME</a>
+  File "/mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/ball/lib/python3.8/site-packages/flask/app.py", line 1084, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/ball/lib/python3.8/site-packages/flask/app.py", line 1073, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/ball/lib/python3.8/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'home'. Did you mean 'profile' instead?
+2024-09-28 09:59:43,559 INFO: Tinker Full-stack App [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/CuisineGlobe/app/__init__.py:63]
+2024-09-28 10:00:35,312 ERROR: Exception on /home [GET] [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/ball/lib/python3.8/site-packages/flask/app.py:838]
 Traceback (most recent call last):
-  File "/home/missmandazi/.local/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+  File "/mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/ball/lib/python3.8/site-packages/flask/app.py", line 1473, in wsgi_app
     response = self.full_dispatch_request()
-  File "/home/missmandazi/.local/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+  File "/mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/ball/lib/python3.8/site-packages/flask/app.py", line 882, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "/home/missmandazi/.local/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+  File "/mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/ball/lib/python3.8/site-packages/flask/app.py", line 880, in full_dispatch_request
     rv = self.dispatch_request()
-  File "/home/missmandazi/.local/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-  File "/mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/routes.py", line 153, in login
-    return render_template('login.html', title='Login', form=form)
-  File "/home/missmandazi/.local/lib/python3.8/site-packages/flask/templating.py", line 152, in render_template
-    return _render(app, template, context)
-  File "/home/missmandazi/.local/lib/python3.8/site-packages/flask/templating.py", line 133, in _render
-    rv = template.render(context)
-  File "/home/missmandazi/.local/lib/python3.8/site-packages/jinja2/environment.py", line 1301, in render
-    self.environment.handle_exception()
-  File "/home/missmandazi/.local/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "/mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/templates/login.html", line 1, in top-level template code
-    {% extends 'base.html' %}
-  File "/mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/templates/base.html", line 52, in top-level template code
-    {% block content %}
-  File "/mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/templates/login.html", line 37, in block 'content'
-    <a href="{{ url_for(request_password_reset) }}">Reset Here</a>
-  File "/home/missmandazi/.local/lib/python3.8/site-packages/flask/app.py", line 1018, in url_for
-    if endpoint[:1] == ".":
-jinja2.exceptions.UndefinedError: 'request_password_reset' is undefined
-2024-05-11 08:50:46,536 INFO: Tinker Full-stack App [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/__init__.py:61]
-2024-05-11 08:52:40,063 ERROR: Exception on /request-password-reset [GET] [in /home/missmandazi/.local/lib/python3.8/site-packages/flask/app.py:825]
-Traceback (most recent call last):
-  File "/home/missmandazi/.local/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/missmandazi/.local/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/home/missmandazi/.local/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/missmandazi/.local/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-  File "/mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/routes.py", line 41, in request_password_reset
+  File "/mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/ball/lib/python3.8/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/ball/lib/python3.8/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/CuisineGlobe/app/routes.py", line 113, in index
     return render_template(
-  File "/home/missmandazi/.local/lib/python3.8/site-packages/flask/templating.py", line 152, in render_template
+  File "/mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/ball/lib/python3.8/site-packages/flask/templating.py", line 150, in render_template
     return _render(app, template, context)
-  File "/home/missmandazi/.local/lib/python3.8/site-packages/flask/templating.py", line 133, in _render
+  File "/mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/ball/lib/python3.8/site-packages/flask/templating.py", line 131, in _render
     rv = template.render(context)
-  File "/home/missmandazi/.local/lib/python3.8/site-packages/jinja2/environment.py", line 1301, in render
+  File "/mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/ball/lib/python3.8/site-packages/jinja2/environment.py", line 1304, in render
     self.environment.handle_exception()
-  File "/home/missmandazi/.local/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
+  File "/mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/ball/lib/python3.8/site-packages/jinja2/environment.py", line 939, in handle_exception
     raise rewrite_traceback_stack(source=source)
-  File "/mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/templates/request_password_reset.html", line 1, in top-level template code
+  File "/mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/CuisineGlobe/app/templates/index.html", line 1, in top-level template code
     {% extends 'base.html' %}
-  File "/mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/templates/base.html", line 52, in top-level template code
-    {% block content %}
-  File "/mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/templates/request_password_reset.html", line 12, in block 'content'
-    {{form.username.label}}<br>
-  File "/home/missmandazi/.local/lib/python3.8/site-packages/jinja2/environment.py", line 485, in getattr
-    return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'app.forms.ResetPasswordRequestForm object' has no attribute 'username'
-2024-05-11 08:55:26,828 INFO: Tinker Full-stack App [in /mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/app/__init__.py:61]
+  File "/mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/CuisineGlobe/app/templates/base.html", line 59, in top-level template code
+    <a class="nav-link" href="{{ url_for('profile') }}" style="color: #FF9900; font-weight: bolder;">PROILE</a>
+  File "/mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/ball/lib/python3.8/site-packages/flask/app.py", line 1084, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/ball/lib/python3.8/site-packages/flask/app.py", line 1073, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/mnt/c/Users/Atuech Obosi/OneDrive/Desktop/software-development(Ayanda)/Chapter-13-Pagination-workthrough-/ball/lib/python3.8/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'profile'. Did you forget to specify values ['username']?

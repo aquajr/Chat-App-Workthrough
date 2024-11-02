@@ -1,13 +1,13 @@
 <table class="table table-hover">
-    <tr style="border: 5px solid rgb(13, 78, 29);">
+    <tr style="border: 2px solid rgb(0, 0, 0); border-radius: 5px;">
         <td width="70px">
             <a href="{{ url_for('profile', username=post.author.username) }}">
-                <img src="{{ post.author.avatar(70) }}" style="border: 5px solid rgb(0, 0, 0);">
+                <img src="{{ post.author.avatar(70) }}" style="border: 2px solid rgb(0, 0, 0); border-radius: 5px;">
             </a>
         </td>
         <td>
-            <h7 style="border: 3px solid rgb(0, 0, 0); border-radius: 10%; background-color: rgb(23, 147, 25);">
-            <a href="{{ url_for('profile', username=post.author.username) }}" style="color: aliceblue; text-decoration:none;">
+            <h7 style="font-weight: bold;">
+            <a href="{{ url_for('profile', username=post.author.username) }}" style="color: rgb(0, 0, 0); text-decoration:none;">
                 {{ post.author.username }}
             </a>
             </h7>
